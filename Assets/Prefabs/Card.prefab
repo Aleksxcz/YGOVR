@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 3368248412009193191}
   - component: {fileID: 5851405138408804865}
   - component: {fileID: 8810056994326546017}
+  - component: {fileID: 4952702516308257848}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,6 +285,22 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &4952702516308257848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438362477946094593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83b5691aaa089149b8de20a5e94d73b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 0}
+  idNumber: 0
+  nameText: 
+  artworkImage: {fileID: 0}
 --- !u!1 &5885337006515316772
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +317,7 @@ GameObject:
   - component: {fileID: 2423317485095994088}
   - component: {fileID: 2406307019101683515}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Front Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
