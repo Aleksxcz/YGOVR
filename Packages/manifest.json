@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.unity.collab-proxy": "2.7.1",
+    "com.unity.editorcoroutines": "1.0.0",
     "com.unity.feature.development": "1.0.2",
     "com.unity.inputsystem": "1.13.0",
     "com.unity.learn.iet-framework": "4.0.4",
@@ -13,6 +14,19 @@
     "com.unity.xr.management": "4.5.0",
     "com.unity.xr.mock-hmd": "1.4.0-preview.2",
     "com.unity.xr.openxr": "1.14.0",
+    "io.extendreality.tilia.camerarigs.spatialsimulator.unity": "2.2.19",
+    "io.extendreality.tilia.camerarigs.trackedalias.unity": "2.5.5",
+    "io.extendreality.tilia.camerarigs.unityxr": "2.1.14",
+    "io.extendreality.tilia.camerarigs.xrpluginframework.unity": "2.1.14",
+    "io.extendreality.tilia.input.unityinputmanager": "2.1.15",
+    "io.extendreality.tilia.input.unityinputsystem": "2.4.11",
+    "io.extendreality.tilia.interactions.pointerinteractors.unity": "2.3.26",
+    "io.extendreality.tilia.interactions.snapzone.unity": "2.4.8",
+    "io.extendreality.tilia.locomotors.axismove.unity": "2.1.12",
+    "io.extendreality.tilia.locomotors.climbing.unity": "2.4.18",
+    "io.extendreality.tilia.locomotors.movementamplifier.unity": "2.0.22",
+    "io.extendreality.tilia.locomotors.teleporter.unity": "2.2.4",
+    "io.extendreality.tilia.locomotors.teleporttargets.unity": "2.1.31",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
@@ -45,5 +59,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "npmjs",
+      "url": "https://registry.npmjs.org/",
+      "scopes": [
+        "io.extendreality"
+      ]
+    }
+  ]
 }
