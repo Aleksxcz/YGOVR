@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-### **Issue: [Feature Name]**  
+###  
 **Feature:** [Briefly describe the feature]  
 
 **Description:**  
