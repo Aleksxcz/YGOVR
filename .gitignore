@@ -6,6 +6,9 @@
 [Ll]ogs/
 [Uu]sersettings/
 Assets/AssetStoreTools*
+Assets/Resources/Card Pics
+Assets/YGO Files/Full
+Assets/YGO Files/Cropped
 
 # Visual Studio cache directory
 .vs/
