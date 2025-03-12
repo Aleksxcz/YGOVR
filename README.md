@@ -14,7 +14,7 @@ Welcome to the **VR Yu-Gi-Oh! Project**, a fan-made virtual reality experience w
 ## Installation
 1. Ensure you have a compatible VR headset (e.g., Meta Quest, HTC Vive, Valve Index, or Oculus Rift).
 2. Download and install the latest version of the VR Yu-Gi-Oh! application.
-3. Follow [this](https://drive.google.com/file/d/1DjdK_L03rusWLj9Qp8oRaRwbR1cHdnGc/view) link and download our images zip file.
+3. Follow [this](https://drive.google.com/file/d/141y08YeOi0V1P2UHIE5E9UXKRkfal-1M/view?usp=drive_link) link and download our images zip file.
 4. insert the two image folder into ...
 5. Launch the application and follow the on-screen setup instructions.
 6. Create or import your deck and start dueling!
