@@ -11,6 +11,9 @@ namespace YGOVR.Gameplay
 
         [SerializeField] private DuelPlayerState playerOne = new();
         [SerializeField] private DuelPlayerState playerTwo = new();
+        [SerializeField] private string defaultPlayerOneId = "PlayerOne";
+        [SerializeField] private string defaultPlayerTwoId = "PlayerTwo";
+        [SerializeField] private int defaultStartingLifePoints = 8000;
         [SerializeField] private LifePointsChangedEvent onLifePointsChanged = new();
 
         public DuelPlayerState PlayerOne => playerOne;
@@ -19,8 +22,32 @@ namespace YGOVR.Gameplay
 
         private void Awake()
         {
-            playerOne.ResetLifePoints();
-            playerTwo.ResetLifePoints();
+            if (string.IsNullOrWhiteSpace(playerOne.PlayerId))
+            {
+                playerOne.Initialize(defaultPlayerOneId, defaultStartingLifePoints);
+            }
+            else
+            {
+                playerOne.ResetLifePoints();
+            }
+
+            if (string.IsNullOrWhiteSpace(playerTwo.PlayerId))
+            {
+                playerTwo.Initialize(defaultPlayerTwoId, defaultStartingLifePoints);
+            }
+            else
+            {
+                playerTwo.ResetLifePoints();
+            }
+
+            NotifyLifePointsChanged(playerOne);
+            NotifyLifePointsChanged(playerTwo);
+        }
+
+        public void ConfigurePlayers(string playerOneId, string playerTwoId, int startingLifePoints = 8000)
+        {
+            playerOne.Initialize(playerOneId, startingLifePoints);
+            playerTwo.Initialize(playerTwoId, startingLifePoints);
             NotifyLifePointsChanged(playerOne);
             NotifyLifePointsChanged(playerTwo);
         }

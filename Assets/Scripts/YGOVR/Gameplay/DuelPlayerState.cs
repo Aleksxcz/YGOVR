@@ -14,6 +14,13 @@ namespace YGOVR.Gameplay
         public int StartingLifePoints => startingLifePoints;
         public int CurrentLifePoints => currentLifePoints;
 
+        public void Initialize(string id, int initialLifePoints = 8000)
+        {
+            playerId = id;
+            startingLifePoints = Mathf.Max(0, initialLifePoints);
+            ResetLifePoints();
+        }
+
         public void ResetLifePoints()
         {
             currentLifePoints = Mathf.Max(0, startingLifePoints);
