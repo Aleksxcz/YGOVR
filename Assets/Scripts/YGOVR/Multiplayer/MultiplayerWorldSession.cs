@@ -89,6 +89,21 @@ namespace YGOVR.Multiplayer
             return true;
         }
 
+        public void RegisterOrUpdatePlayer(string playerId, string displayName, bool isSpectator = false, bool isReady = false)
+        {
+            if (string.IsNullOrWhiteSpace(playerId))
+            {
+                return;
+            }
+
+            var player = GetPlayer(playerId) ?? new MultiplayerPlayerState();
+            player.Initialize(playerId, displayName);
+            player.SetSpectator(isSpectator);
+            player.SetReady(isReady);
+            AddOrUpdatePlayer(player);
+            onPlayerJoined?.Invoke(player);
+        }
+
         private void AddOrUpdatePlayer(MultiplayerPlayerState incomingPlayer)
         {
             var existing = GetPlayer(incomingPlayer.PlayerId);

@@ -2,6 +2,27 @@ using UnityEngine;
 
 namespace YGOVR.Gameplay
 {
+    public enum DuelFeature
+    {
+        Multiplayer,
+        LocalMultiplayer,
+        OnlineMultiplayer,
+        ArMr,
+        RuleVariants,
+        RidingDuel,
+        ActionDuel,
+        ShadowDuel,
+        DestinyDraw,
+        StormAccess,
+        HolographicBattles,
+        SpectatorMode,
+        AvatarCustomization,
+        ProximityVoiceChat,
+        VoiceEmotes,
+        CardHighlighting,
+        InteractiveFields
+    }
+
     [CreateAssetMenu(fileName = "DuelFeatureConfig", menuName = "YGOVR/Gameplay/Duel Feature Config")]
     public class DuelFeatureConfig : ScriptableObject
     {
@@ -49,5 +70,95 @@ namespace YGOVR.Gameplay
         public bool VoiceEmotesEnabled => voiceEmotesEnabled;
         public bool CardHighlightingEnabled => cardHighlightingEnabled;
         public bool InteractiveFieldsEnabled => interactiveFieldsEnabled;
+
+        public bool IsEnabled(DuelFeature feature)
+        {
+            return feature switch
+            {
+                DuelFeature.Multiplayer => multiplayerEnabled,
+                DuelFeature.LocalMultiplayer => localMultiplayerEnabled,
+                DuelFeature.OnlineMultiplayer => onlineMultiplayerEnabled,
+                DuelFeature.ArMr => arMrEnabled,
+                DuelFeature.RuleVariants => ruleVariantsEnabled,
+                DuelFeature.RidingDuel => ridingDuelEnabled,
+                DuelFeature.ActionDuel => actionDuelEnabled,
+                DuelFeature.ShadowDuel => shadowDuelEnabled,
+                DuelFeature.DestinyDraw => destinyDrawEnabled,
+                DuelFeature.StormAccess => stormAccessEnabled,
+                DuelFeature.HolographicBattles => holographicBattlesEnabled,
+                DuelFeature.SpectatorMode => spectatorModeEnabled,
+                DuelFeature.AvatarCustomization => avatarCustomizationEnabled,
+                DuelFeature.ProximityVoiceChat => proximityVoiceChatEnabled,
+                DuelFeature.VoiceEmotes => voiceEmotesEnabled,
+                DuelFeature.CardHighlighting => cardHighlightingEnabled,
+                DuelFeature.InteractiveFields => interactiveFieldsEnabled,
+                _ => false
+            };
+        }
+
+        public void SetEnabled(DuelFeature feature, bool enabled)
+        {
+            switch (feature)
+            {
+                case DuelFeature.Multiplayer:
+                    multiplayerEnabled = enabled;
+                    break;
+                case DuelFeature.LocalMultiplayer:
+                    localMultiplayerEnabled = enabled;
+                    break;
+                case DuelFeature.OnlineMultiplayer:
+                    onlineMultiplayerEnabled = enabled;
+                    break;
+                case DuelFeature.ArMr:
+                    arMrEnabled = enabled;
+                    break;
+                case DuelFeature.RuleVariants:
+                    ruleVariantsEnabled = enabled;
+                    break;
+                case DuelFeature.RidingDuel:
+                    ridingDuelEnabled = enabled;
+                    break;
+                case DuelFeature.ActionDuel:
+                    actionDuelEnabled = enabled;
+                    break;
+                case DuelFeature.ShadowDuel:
+                    shadowDuelEnabled = enabled;
+                    break;
+                case DuelFeature.DestinyDraw:
+                    destinyDrawEnabled = enabled;
+                    break;
+                case DuelFeature.StormAccess:
+                    stormAccessEnabled = enabled;
+                    break;
+                case DuelFeature.HolographicBattles:
+                    holographicBattlesEnabled = enabled;
+                    break;
+                case DuelFeature.SpectatorMode:
+                    spectatorModeEnabled = enabled;
+                    break;
+                case DuelFeature.AvatarCustomization:
+                    avatarCustomizationEnabled = enabled;
+                    break;
+                case DuelFeature.ProximityVoiceChat:
+                    proximityVoiceChatEnabled = enabled;
+                    break;
+                case DuelFeature.VoiceEmotes:
+                    voiceEmotesEnabled = enabled;
+                    break;
+                case DuelFeature.CardHighlighting:
+                    cardHighlightingEnabled = enabled;
+                    break;
+                case DuelFeature.InteractiveFields:
+                    interactiveFieldsEnabled = enabled;
+                    break;
+            }
+        }
+
+        public bool Toggle(DuelFeature feature)
+        {
+            var updated = !IsEnabled(feature);
+            SetEnabled(feature, updated);
+            return updated;
+        }
     }
 }
